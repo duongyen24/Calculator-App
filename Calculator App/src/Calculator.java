@@ -5,7 +5,8 @@ import java.awt.event.*;
 
 public class Calculator implements ActionListener {
 	
-	Calculator();
+	Calculator() {
+	}
 	
 	
 	public static void main(String[] args) {
