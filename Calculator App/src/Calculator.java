@@ -72,10 +72,17 @@ public class Calculator implements ActionListener {
 		delButton.setBounds(50, 430, 145, 30);
 		clrButton.setBounds(205, 430, 145, 30);
 		
+		panel = new JPanel();
+		panel.setBounds(500, 100, 300, 300);
+		panel.setLayout(new GridLayout(4,4,10,10));
+		//panel.setBackground(Color.black);
+		
+		panel.add(numberButtons[1]);
+		
 		//call things out
+		frame.add(panel);
 		frame.add(delButton);
 		frame.add(clrButton);
-		
 		frame.add(textfield);
 		frame.setVisible(true);
 	}
