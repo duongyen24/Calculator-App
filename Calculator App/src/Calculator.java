@@ -1,4 +1,14 @@
-//14:52
+/*
+
+how? and step?
+
+- declare variable need for frame and textfield
+- create calc frame: declare function button and number button
+- create textfield
+- create a panel to add function and number button in
+- implement function for those buttons in override method
+*/
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -73,11 +83,27 @@ public class Calculator implements ActionListener {
 		clrButton.setBounds(205, 430, 145, 30);
 		
 		panel = new JPanel();
-		panel.setBounds(500, 100, 300, 300);
+		panel.setBounds(50, 100, 300, 300);
 		panel.setLayout(new GridLayout(4,4,10,10));
 		//panel.setBackground(Color.black);
 		
 		panel.add(numberButtons[1]);
+		panel.add(numberButtons[2]);
+		panel.add(numberButtons[3]);
+		panel.add(addButton);
+		panel.add(numberButtons[4]);
+		panel.add(numberButtons[5]);
+		panel.add(numberButtons[6]);
+		panel.add(subButton);
+		panel.add(numberButtons[7]);
+		panel.add(numberButtons[8]);
+		panel.add(numberButtons[9]);
+		panel.add(mulButton);
+		panel.add(decButton);
+		panel.add(numberButtons[0]);
+		panel.add(equButton);
+		panel.add(divButton);
+		
 		
 		//call things out
 		frame.add(panel);
@@ -96,7 +122,14 @@ public class Calculator implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		// lam cho cac button khi nhan vao, so hien ra thanh taskbar ben tren
+		for( int i = 0; i <10 ; i++) {
+			if(e.getSource()== numberButtons[i]) {
+				textfield.setText(textfield.getText().concat(String.valueOf(i)));
+			}
+		}
+		
+		
 		
 	}
 
